@@ -1,1 +1,1 @@
-module dbs.automotive.helpers;
+module apps.automotive.helpers;
