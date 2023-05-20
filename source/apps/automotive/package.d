@@ -32,6 +32,6 @@ static this() {
     App
     .name("automotiveApp")
     .rootPath("/apps/automotive")
-    .addRoute(Route("", HTTPMethod.GET, ATMIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, ATMIndexPageController)));
+    .addRoute(Route("", HTTPMethod.GET, IndexPageController))
+    .addRoute(Route("/", HTTPMethod.GET, IndexPageController)));
 }

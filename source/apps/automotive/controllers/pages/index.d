@@ -3,25 +3,25 @@ module apps.automotive.controllers.pages.index;
 import apps.automotive;
 @safe:
 
-class DATMIndexPageController : DAPPPageController {
-  mixin(ControllerThis!("ATMIndexPageController"));
+class DIndexPageController : DAPPPageController {
+  mixin(ControllerThis!("IndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(ATMIndexView(this));
+      .view(IndexView(this));
   }
 
   override void beforeResponse(STRINGAA options = null) {
-    debugMethodCall(moduleName!DATMIndexPageController~":DATMIndexPageController::beforeResponse");
+    debugMethodCall(moduleName!DIndexPageController~":DIndexPageController::beforeResponse");
     super.beforeResponse(options);
     if (hasError || "redirect" in options) { return; }
 
     this.view(
-      ATMIndexView(this));
+      IndexView(this));
   }
 }
-mixin(ControllerCalls!("ATMIndexPageController"));
+mixin(ControllerCalls!("IndexPageController"));
 
 
