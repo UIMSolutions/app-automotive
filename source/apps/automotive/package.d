@@ -6,14 +6,16 @@ mixin(ImportPhobos!());
 public import vibe.d;
 
 // UIM
-public import uim.core;
-public import uim.bootstrap;
-public import uim.html;
-public import uim.oop;
-public import uim.models;
-public import uim.apps;
-public import uim.controls;
-public import uim.servers;
+public {
+  import uim.core;
+  import uim.bootstrap;
+  import uim.html;
+  import uim.oop;
+  import uim.models;
+  import uim.apps;
+  import uim.controls;
+  import uim.servers;
+}
 
 public import langs.javascript;
 
@@ -25,11 +27,11 @@ public {
   import apps.automotive.views;
 }
 
-DApp automotiveApp;
 static this() {
-  automotiveApp = App
+  AppRegistry.register(  
+    App
     .name("automotiveApp")
     .rootPath("/apps/automotive")
     .addRoute(Route("", HTTPMethod.GET, ATMIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, ATMIndexPageController));
+    .addRoute(Route("/", HTTPMethod.GET, ATMIndexPageController)));
 }
