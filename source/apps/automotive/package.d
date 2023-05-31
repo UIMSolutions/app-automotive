@@ -13,7 +13,7 @@ public {
   import uim.oop;
   import uim.models;
   import uim.apps;
-  import uim.controls;
+  import web.controls;
   import uim.servers;
 }
 
