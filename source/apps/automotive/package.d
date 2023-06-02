@@ -13,8 +13,11 @@ public {
   import uim.oop;
   import uim.models;
   import uim.apps;
-  import web.controls;
   import uim.servers;
+}
+
+public {
+  import web.controls;
 }
 
 public import langs.javascript;
