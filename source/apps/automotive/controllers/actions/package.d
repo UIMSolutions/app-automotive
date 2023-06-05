@@ -5,5 +5,5 @@ public {
 
   import apps.automotive.controllers.actions.create;
   import apps.automotive.controllers.actions.update;
-  import apps.automotive.controllers.actions.delete;
+  import apps.automotive.controllers.actions.delete_;
 }

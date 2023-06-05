@@ -1,4 +1,4 @@
-module apps.automotive.controllers.actions.delete;
+module apps.automotive.controllers.actions.delete_;
 
 import apps.automotive;
 @safe:
