@@ -3,7 +3,7 @@ module apps.automotive.controllers.actions.update;
 import apps.automotive;
 @safe:
 
-class DAUTOUpdateActionController : DAUTOUpdateActionController {
+class DAUTOUpdateActionController : DUpdateActionController {
   mixin(ControllerThis!("AUTOUpdateActionController"));
 
   override void initialize(Json configSettings = Json(null)) {
