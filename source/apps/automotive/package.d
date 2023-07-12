@@ -32,9 +32,10 @@ public {
 
 static this() {
   AppRegistry.register("apps.automotive",   
-    App
-    .name("automotiveApp")
-    .rootPath("/apps/automotive")
-    .addRoute(Route("", HTTPMethod.GET, IndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, IndexPageController)));
+    App("automotiveApp", "/apps/automotive")
+      .addRoutes(
+        Route("", HTTPMethod.GET, IndexPageController),
+        Route("/", HTTPMethod.GET, IndexPageController)
+      )
+    );
 }
