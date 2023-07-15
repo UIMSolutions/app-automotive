@@ -3,14 +3,14 @@ module apps.automotive.controllers.pages.error;
 import apps.automotive;
 @safe:
 
-class DATMErrorPageController : DPageController {
-  mixin(ControllerThis!("ATMErrorPageController"));
+class DErrorPageController : DPageController {
+  mixin(ControllerThis!("ErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(ATMErrorView(this));
+      .view(ErrorView(this));
   }
 }
-mixin(ControllerCalls!("ATMErrorPageController"));
+mixin(ControllerCalls!("ErrorPageController"));
