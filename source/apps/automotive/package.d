@@ -32,7 +32,7 @@ public {
 
 static this() {
   AppRegistry.register("apps.automotive",   
-    App("automotiveApp", "/apps/automotive")
+    App("automotiveApp", "apps/automotive")
       .importTranslations()
       .addRoutes(
         Route("", HTTPMethod.GET, IndexPageController),
