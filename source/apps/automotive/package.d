@@ -2,8 +2,10 @@ module apps.automotive;
 
 mixin(ImportPhobos!());
 
-// Dub
-public import vibe.d;
+// External
+public {
+  import vibe.d;
+}
 
 // UIM
 public {
@@ -31,12 +33,17 @@ public {
 }
 
 static this() {
-  AppRegistry.register("apps.automotive",   
-    App("automotiveApp", "apps/automotive")
-      .importTranslations()
-      .addRoutes(
-        Route("", HTTPMethod.GET, IndexPageController),
-        Route("/", HTTPMethod.GET, IndexPageController)
-      )
+  auto myApp = App("automotiveApp", "apps/automotive");
+  with(myApp) {
+    importTranslations();
+    addControllers([
+      "auto.index": IndexPageController
+    ]);
+    addRoutes(
+      Route("", HTTPMethod.GET, controller("auto.index")),
+      Route("/", HTTPMethod.GET, controller("auto.index"))
     );
+  }
+
+  AppRegistry.register("apps.automotive", myApp);
 }
